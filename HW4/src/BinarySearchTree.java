@@ -49,7 +49,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T>, R
 			inOrderRec(root.rc, TreeNodeList);
 		}
 
-		;
 		return TreeNodeList;
 	}
 
@@ -61,6 +60,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T>, R
 		List<Producer<T>> threads = new ArrayList<Producer<T>>();
 
 		Singleton s = Singleton.getInstance();
+		//System.out.println("\nComputing Array. . . .");
 
 		bstlist.stream().forEach(x -> threads.add((new Producer<T>(x.inOrderRec(x.root, new ArrayList<T>())))));
 
@@ -87,7 +87,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T>, R
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+		
 
 	}
 

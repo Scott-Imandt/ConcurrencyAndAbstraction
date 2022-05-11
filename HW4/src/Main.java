@@ -34,8 +34,10 @@ public class Main {
 
 		t3.forEach(System.out::println); // iteration in increasing order
 
-		List<BinarySearchTree<String>> trees = new ArrayList<BinarySearchTree<String>>();
-
+		List<BinarySearchTree<Integer>> trees = new ArrayList<BinarySearchTree<Integer>>();
+			trees.add(t1);
+			trees.add(t2);
+		
 		System.out.println(BinarySearchTree.merge(trees));
 
 	}
